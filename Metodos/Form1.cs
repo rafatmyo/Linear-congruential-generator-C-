@@ -35,7 +35,7 @@ namespace Metodos
         private void bttnGen_Click(object sender, EventArgs e)
         {
             int seed, a, c, mod, it, numrand, residuo;
-            int val1, val2;
+            int val1, val2, val3, rule3, rule4;
             float division;
 
             seed = Convert.ToInt32(txtSeed.Text);
@@ -46,7 +46,9 @@ namespace Metodos
 
             val1 = c;
             val2 = mod;
-
+            val3 = mod;
+            rule3 = val3 % 4;
+            rule4 = (a - 1) % 4;
             while (val1 != 0 && val2 != 0)
             {
                 if (val1 > val2)
@@ -57,9 +59,19 @@ namespace Metodos
 
             if (Math.Max(val1, val2) != 1)
             {
-                randomNums.Text = "El valor de c y de mod son coprimos por lo tanto no se recomienda usar esos numeros.";        
+                randomNums.Text = "El valor de c y de mod son coprimos por lo tanto no se recomienda usar esos numeros.";
 
-            }else
+            } else if (rule3 != 0)
+            {
+                randomNums.Text = "El mod no es divisble por 4";
+
+            }
+            else if (rule4 != 0)
+            {
+                randomNums.Text = "La variable (a - 1) no es divisble por 4";
+
+            }
+            else
 
             {
                 for (int i = 1; i <= it; i++)
