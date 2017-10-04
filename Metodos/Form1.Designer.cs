@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mixto));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -180,6 +181,7 @@
             this.randomNums.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.randomNums.Size = new System.Drawing.Size(143, 208);
             this.randomNums.TabIndex = 14;
+            this.randomNums.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.randomNums.TextChanged += new System.EventHandler(this.randomNums_TextChanged);
             // 
             // Mixto
@@ -202,6 +204,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mixto";
             this.Text = "Método Congruencial mixto";
             this.ResumeLayout(false);
